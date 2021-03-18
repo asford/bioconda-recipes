@@ -18,12 +18,13 @@ requirements:
     - automake
     - autoconf
   host:
-    - libcurl
-    - bzip2
-    - xz
-    - zlib
-    - libdeflate
-    - openssl  # [not osx]
+    #- libcurl
+    #- bzip2
+    #- xz
+    #- zlib
+    #- libdeflate
+    #- openssl  # [not osx]
+    - htslib
   run:
     - openjdk >=8
     - bwa >=0.7
