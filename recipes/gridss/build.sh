@@ -57,9 +57,9 @@ ln -s $TGT/gridss_java_entrypoint $PREFIX/bin/SubsetToTaxonomy
 # gridss.repeatmasker namespace
 ln -s $TGT/gridss_java_entrypoint $PREFIX/bin/AnnotateVariantsRepeatMasker
 
-# build and install gridsstool
+# build and install gridsstools
 tar xf gridsstools.src.tar.gz
-cd src/main/c/gridsstool
+cd src/main/c/gridsstools
 ./configure --prefix=$PREFIX
 make
 make install
