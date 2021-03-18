@@ -3,17 +3,25 @@
 
 package:
   name: gridss
-  version: '{{ version }}'
+  version: {{ version }}
 
 source:
   url: https://github.com/PapenfussLab/gridss/releases/download/v{{ version }}/gridss-{{ version }}.tar.gz
-  sha256: '{{ sha256 }}'
+  sha256: {{ sha256 }}
 
 build:
   number: 0
-  noarch: generic
 
 requirements:
+  build:
+    - {{ compiler('c') }}
+  host:
+    - libcurl
+    - bzip2
+    - xz
+    - zlib
+    - libdeflate
+    - openssl  # [not osx]
   run:
     - openjdk >=8
     - bwa >=0.7

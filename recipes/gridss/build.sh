@@ -59,7 +59,12 @@ ln -s $TGT/gridss_java_entrypoint $PREFIX/bin/AnnotateVariantsRepeatMasker
 
 # build and install gridsstools
 tar xf gridsstools.src.tar.gz
-cd src/main/c/gridsstools
+cd src/main/c/gridsstools/htslib
+autoheader
+autoconf
 ./configure --prefix=$PREFIX
 make
-make install
+cd ..
+autoheader
+autoconf
+./configure && make install
