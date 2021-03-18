@@ -62,9 +62,9 @@ tar xf gridsstools.src.tar.gz
 cd src/main/c/gridsstools/htslib
 autoheader
 autoconf
-./configure --prefix=$PREFIX
-make
+./configure && make
 cd ..
 autoheader
 autoconf
-./configure && make install
+./configure && make all
+cp gridsstools $PREFIX/bin
